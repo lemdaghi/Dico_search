@@ -111,6 +111,18 @@ Chaque analyse est réalisée avec plusieurs stratégies de recherche :
 - Respect de la casse : mots transformés en minuscules pour la comparaison
 - Comparaison linguistique utilisant `strcoll()` pour respecter l’ordre alphabétique français
 
+
+
+⚠️ Note spéciale - Arbre BST
+
+La méthode utilisant un arbre binaire de recherche (BST) fonctionne correctement,
+mais le temps de construction de l'arbre peut être très élevé pour des dictionnaires volumineux.
+Cela est dû au fait que l'arbre n'est pas équilibré lors de l'insertion (tri déséquilibré),
+ce qui peut conduire à une complexité de O(n²).
+
+Les résultats restent valides, mais l'analyse est plus lente comparée aux autres méthodes.
+Vous pouvez décomenter le code concernant la méthode BST dans le main et tester avec "dico_lower.txt"
+
 ---
 
 ## Améliorations possibles
